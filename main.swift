@@ -6,7 +6,11 @@ let lvl4 = "7"
 var score: Int
 var input = readLine()
 var currentLevel = 1
-
+var hints = ["Placholder", // Needed because otherwise the hint for level one  will have an index of zero
+            "Can save a life.",
+            "Gimme some personal space!",
+            "Ah! A wild odd number! A young one, too.",
+            "Lucky, lucky."]
 // Functions
 /*func Append(_ string: String, file: String) {
   do {
@@ -24,12 +28,12 @@ var currentLevel = 1
 score = 0 // I initialized the variable seperatly because I would like to add a way to save progress
           // It's easier this way
 while score>(-5) { 
-  input = readLine()
-  switch(input) {
+  input = readLine()   //take user input
+  switch(input) {      //start switch
     case ",":
       if currentLevel == 1 {
-        score += 1
-        currentLevel += 1
+        score += 1           // Add to score
+        currentLevel += 1    // Progress level
         
         print("Score = ",score)
         if score<0 {
@@ -72,5 +76,6 @@ while score>(-5) {
         }
     default:
       print("Incorrect")
+      print(hints[currentLevel]) // Prints hint with index of teh current level. This is why there needs to be a placeholder.
   } 
 }
