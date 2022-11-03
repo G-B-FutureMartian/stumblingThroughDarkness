@@ -4,6 +4,7 @@ let lvl2 = " "
 let lvl3 = "3"
 let lvl4 = "7"
 var score: Int
+print("Press enter to begin:")
 var input = readLine()
 var currentLevel = 1
 var hints = ["Placholder", // Needed because otherwise the hint for level one  will have an index of zero
@@ -27,7 +28,7 @@ var hints = ["Placholder", // Needed because otherwise the hint for level one  w
 // Playing the game
 score = 0 // I initialized the variable seperatly because I would like to add a way to save progress
           // It's easier this way
-while score>(-5) { 
+while score>(-5) {
   input = readLine()   //take user input
   switch(input) {      //start switch
     case ",":
@@ -75,7 +76,12 @@ while score>(-5) {
           print("Level: ", currentLevel)
         }
     default:
-      print("Incorrect")
-      print(hints[currentLevel]) // Prints hint with index of teh current level. This is why there needs to be a placeholder.
-  } 
+      do {
+        print("Incorrect")
+        print(hints[currentLevel]) // Prints hint with index of the current level. This is why there needs to be a placeholder.
+      }; //catch {
+        //print("Congrats!")
+        //break
+      //}
+    }
 }
