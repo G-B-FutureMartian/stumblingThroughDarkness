@@ -77,6 +77,7 @@ while score>(-5) {
         }
     default:
       do {
+        score -= 1
         print("Incorrect")
         print(hints[currentLevel]) // Prints hint with index of the current level. This is why there needs to be a placeholder.
       }; //catch {
