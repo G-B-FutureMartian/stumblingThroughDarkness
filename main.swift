@@ -12,6 +12,9 @@ var hints = ["Placholder", // Needed because otherwise the hint for level one  w
             "Gimme some personal space!",
             "Ah! A wild odd number! A young one, too.",
             "Lucky, lucky."]
+var beginText = ["Yet another placeholder",
+                "Full stop? Short stop.",
+                "I say outer you say:"]
 // Functions
 /*func Append(_ string: String, file: String) {
   do {
